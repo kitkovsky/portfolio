@@ -1,7 +1,10 @@
 import type { Config } from 'tailwindcss'
+import twColors from 'tailwindcss/colors'
 
 export const colors = {
   white: '#e2e8f0',
+  ['white-dim']: twColors.teal[600],
+  ['white-extra-dim']: twColors.teal[700],
   black: '#111010',
 }
 
@@ -15,7 +18,9 @@ const config: Config = {
     fontFamily: {
       mono: ['var(--font-geist-mono)'],
     },
-    colors: colors,
+    extend: {
+      colors: colors,
+    },
   },
 }
 
