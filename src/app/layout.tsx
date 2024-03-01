@@ -28,7 +28,9 @@ export default function RootLayout({
         <NavBar />
         <AboutMeColumn />
 
-        <div className="p-10">{children}</div>
+        <div className="mx-auto w-full max-w-3xl gap-10 overflow-y-scroll px-10 py-20">
+          {children}
+        </div>
       </body>
     </html>
   )
@@ -36,7 +38,7 @@ export default function RootLayout({
 
 const StarsBG = (): React.ReactElement => (
   <>
-    <div className="stars pointer-events-none absolute left-0 top-0 h-px w-px opacity-10" />
-    <div className="stars-2 pointer-events-none absolute left-0 top-0 h-0.5 w-0.5 opacity-10" />
+    <div className="stars pointer-events-none absolute left-0 top-0 h-px w-px opacity-15" />
+    <div className="stars-2 pointer-events-none absolute left-0 top-0 h-0.5 w-0.5 opacity-15" />
   </>
 )

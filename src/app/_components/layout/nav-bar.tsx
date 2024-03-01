@@ -9,7 +9,7 @@ import { type HeroIcon } from '@/app/types'
 
 export const NavBar = (): React.ReactElement => {
   return (
-    <div className="flex flex-col items-center justify-between border border-y-0 border-l-0 border-teal-950 p-4">
+    <div className="sticky top-0 flex h-dvh flex-col items-center justify-between border border-y-0 border-l-0 border-teal-950 p-4">
       <Link href="/" className="font-bold">
         OK
       </Link>

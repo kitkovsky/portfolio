@@ -11,7 +11,7 @@ import { Link } from '@components/ui/link'
 import myFace from '~/public/my-face.jpeg'
 
 export const AboutMeColumn = (): React.ReactElement => (
-  <div className="flex w-80 flex-col items-center gap-9 border border-y-0 border-l-0 border-teal-950 px-5 py-7">
+  <div className="sticky top-0 flex h-dvh w-80 min-w-80 flex-col items-center gap-9 border border-y-0 border-l-0 border-teal-950 px-5 py-7">
     <Image
       src={myFace}
       className="rounded-full"
