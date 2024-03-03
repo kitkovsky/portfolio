@@ -6,10 +6,22 @@ import {
 } from '@heroicons/react/24/outline'
 
 import { type HeroIcon } from '@/app/types'
+import { cn } from '@utils/cn.utils'
 
-export const NavBar = (): React.ReactElement => {
+export interface NavBarProps {
+  className?: string
+}
+
+export const NavBar = (props: NavBarProps): React.ReactElement => {
+  const { className } = props
+
   return (
-    <div className="sticky top-0 flex h-dvh flex-col items-center justify-between border border-y-0 border-l-0 border-teal-950 p-4">
+    <div
+      className={cn(
+        'sticky top-0 flex h-dvh flex-col items-center justify-between border border-y-0 border-l-0 border-teal-950 p-4',
+        className,
+      )}
+    >
       <Link href="/" className="font-bold">
         OK
       </Link>

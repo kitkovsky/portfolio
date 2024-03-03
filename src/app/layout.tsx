@@ -21,14 +21,14 @@ export default function RootLayout({
       <body
         className={cn(
           GeistMono.variable,
-          'flex min-h-dvh bg-black font-mono text-white',
+          'flex min-h-dvh bg-black font-mono text-white selection:bg-white selection:text-black',
         )}
       >
         <StarsBG />
-        <NavBar />
-        <AboutMeColumn />
+        <NavBar className="z-10" />
+        <AboutMeColumn className="z-10" />
 
-        <div className="mx-auto w-full max-w-3xl gap-10 overflow-y-scroll px-10 py-20">
+        <div className="z-10 w-full gap-10 overflow-y-scroll px-10 py-20">
           {children}
         </div>
       </body>
