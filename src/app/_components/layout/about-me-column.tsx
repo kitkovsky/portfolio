@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import NextLink from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faGithub,
@@ -42,12 +41,12 @@ export const AboutMeColumn = (
 
       <div className="flex gap-4">
         {socialMediaLinks.map(({ href, icon }) => (
-          <NextLink href={href} target="_blank" key={href}>
+          <Link href={href} target="_blank" key={href} variant="custom">
             <FontAwesomeIcon
               icon={icon}
               className="mr-2 h-6 w-6 text-white-extra-dim transition-all hover:text-white"
             />
-          </NextLink>
+          </Link>
         ))}
       </div>
 

@@ -1,6 +1,6 @@
 import Image, { type StaticImageData } from 'next/image'
-import Link from 'next/link'
 
+import { Link } from '@components/ui/link'
 import caLanding from '~/public/ca/landing.png'
 import dsLanding from '~/public/ds/landing.png'
 import ccLanding from '~/public/cc/landing.png'
@@ -15,6 +15,7 @@ export const Projects = (): React.ReactElement => (
           className="flex gap-6 rounded border border-transparent p-4 transition-all hover:border-white/20 hover:bg-white/5 hover:!opacity-100 group-hover:opacity-50"
           href={href}
           key={title}
+          variant="custom"
         >
           <Image
             src={img}

@@ -1,10 +1,10 @@
-import Link from 'next/link'
 import {
   UserIcon,
   BriefcaseIcon,
   EnvelopeIcon,
 } from '@heroicons/react/24/outline'
 
+import { Link } from '@components/ui/link'
 import { type HeroIcon } from '@/app/types'
 import { cn } from '@utils/cn.utils'
 
@@ -22,7 +22,7 @@ export const NavBar = (props: NavBarProps): React.ReactElement => {
         className,
       )}
     >
-      <Link href="/" className="font-bold">
+      <Link href="/" className="font-bold" variant="custom">
         OK
       </Link>
 
@@ -32,6 +32,7 @@ export const NavBar = (props: NavBarProps): React.ReactElement => {
             href={href}
             key={href}
             className="flex h-10 w-10 items-center justify-center rounded text-white/80 transition-all hover:bg-teal-900 hover:text-white"
+            variant="custom"
           >
             <Icon className="h-6 w-6" />
           </Link>
