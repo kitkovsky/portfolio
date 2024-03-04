@@ -22,7 +22,7 @@ export const AboutMeColumn = (
   return (
     <div
       className={cn(
-        'sticky top-0 flex h-dvh w-80 min-w-80 flex-col items-center gap-9 border border-y-0 border-l-0 border-teal-950 px-5 py-7',
+        'flex flex-col items-center gap-9 border border-x-0 border-teal-950 px-5 py-7 lg:sticky lg:top-0 lg:h-dvh lg:w-80 lg:min-w-80 lg:border-y-0 lg:border-r',
         className,
       )}
     >

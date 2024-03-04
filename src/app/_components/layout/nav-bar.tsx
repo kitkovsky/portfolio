@@ -2,6 +2,7 @@ import {
   UserIcon,
   BriefcaseIcon,
   EnvelopeIcon,
+  Bars3Icon,
 } from '@heroicons/react/24/outline'
 
 import { Link } from '@components/ui/link'
@@ -18,7 +19,7 @@ export const NavBar = (props: NavBarProps): React.ReactElement => {
   return (
     <div
       className={cn(
-        'sticky top-0 flex h-dvh flex-col items-center justify-between border border-y-0 border-l-0 border-teal-950 p-4',
+        'sticky top-0 flex items-center justify-between border border-x-0 border-t-0 border-teal-950 p-4 backdrop-blur-lg sm:h-dvh sm:w-fit sm:flex-col sm:border-y-0 sm:border-r sm:backdrop-blur-none',
         className,
       )}
     >
@@ -26,7 +27,11 @@ export const NavBar = (props: NavBarProps): React.ReactElement => {
         OK
       </Link>
 
-      <nav className="my-auto flex flex-col gap-3">
+      <button className="sm:hidden">
+        <Bars3Icon className="h-6 w-6" />
+      </button>
+
+      <nav className="my-auto hidden flex-col gap-3 sm:flex">
         {navButtons.map(({ href, Icon }) => (
           <Link
             href={href}

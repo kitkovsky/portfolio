@@ -17,19 +17,21 @@ export default function RootLayout({
   children: React.ReactNode
 }): React.ReactElement {
   return (
-    <html lang="en-US">
+    <html lang="en-US" className="scroll-smooth">
       <body
         className={cn(
           GeistMono.variable,
-          'flex min-h-dvh bg-black font-mono text-white selection:bg-white selection:text-black',
+          'flex min-h-dvh flex-col bg-black font-mono text-white selection:bg-white selection:text-black sm:flex-row',
         )}
       >
         <StarsBG />
-        <NavBar className="z-10" />
-        <AboutMeColumn className="z-10" />
+        <NavBar />
+        <div className="flex w-full flex-col-reverse lg:flex-row">
+          <AboutMeColumn />
 
-        <div className="z-10 w-full gap-10 overflow-y-scroll px-10 py-20">
-          {children}
+          <div className="w-full gap-10 overflow-y-scroll px-4 py-6 sm:px-6 sm:py-10 lg:px-10 lg:py-20">
+            {children}
+          </div>
         </div>
       </body>
     </html>
@@ -38,7 +40,7 @@ export default function RootLayout({
 
 const StarsBG = (): React.ReactElement => (
   <>
-    <div className="stars pointer-events-none absolute left-0 top-0 h-px w-px opacity-15" />
-    <div className="stars-2 pointer-events-none absolute left-0 top-0 h-0.5 w-0.5 opacity-15" />
+    <div className="stars pointer-events-none absolute left-0 top-0 -z-10 h-px w-px opacity-15" />
+    <div className="stars-2 pointer-events-none absolute left-0 top-0 -z-10 h-0.5 w-0.5 opacity-15" />
   </>
 )

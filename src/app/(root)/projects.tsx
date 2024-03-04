@@ -12,7 +12,7 @@ export const Projects = (): React.ReactElement => (
     <div className="group flex flex-col gap-5">
       {projects.map(({ title, href, img, description }) => (
         <Link
-          className="flex gap-6 rounded border border-transparent p-4 transition-all hover:border-white/20 hover:bg-white/5 hover:!opacity-100 group-hover:opacity-50"
+          className="flex flex-col gap-6 rounded border border-transparent p-2 transition-all sm:flex-row sm:p-4 sm:hover:border-white/20 sm:hover:bg-white/5 sm:hover:!opacity-100 sm:group-hover:opacity-50"
           href={href}
           key={title}
           variant="custom"
