@@ -18,6 +18,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }): React.ReactElement {
+  const currentYear = new Date().getFullYear()
+
   return (
     <html lang="en-US" className="scroll-smooth">
       <body
@@ -33,6 +35,12 @@ export default function RootLayout({
 
           <div className="w-full gap-10 overflow-y-scroll px-4 py-6 sm:px-6 sm:py-10 lg:px-10 lg:py-20">
             {children}
+            <footer className="mx-auto mt-10 max-w-3xl border-t border-teal-950 sm:mt-20">
+              <p className="mt-3 text-sm text-white-dim">
+                Copyright &copy; {currentYear} Oliwer Kitkowski. All rights
+                reserved.
+              </p>
+            </footer>
           </div>
         </div>
 
