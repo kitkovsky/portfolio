@@ -19,9 +19,10 @@ const config: Config = {
       mono: ['var(--font-geist-mono)'],
     },
     extend: {
-      colors: colors,
+      colors,
     },
   },
+  plugins: [require('tailwindcss-animate')],
 }
 
 export default config
