@@ -116,7 +116,7 @@ const MobileNav = ({
 )
 
 const navButtons: { label: string; href: string; Icon: HeroIcon }[] = [
-  { label: 'About', href: '#about', Icon: UserIcon },
-  { label: 'Projects', href: '#projects', Icon: BriefcaseIcon },
-  { label: 'Contact', href: '#contact', Icon: EnvelopeIcon },
+  { label: 'About', href: '/#about', Icon: UserIcon },
+  { label: 'Projects', href: '/#projects', Icon: BriefcaseIcon },
+  { label: 'Contact', href: '/#contact', Icon: EnvelopeIcon },
 ]
