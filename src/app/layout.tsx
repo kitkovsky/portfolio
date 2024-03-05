@@ -40,7 +40,7 @@ export default function RootLayout({
 
 const StarsBG = (): React.ReactElement => (
   <>
-    <div className="stars pointer-events-none absolute left-0 top-0 -z-10 h-px w-px opacity-15" />
-    <div className="stars-2 pointer-events-none absolute left-0 top-0 -z-10 h-0.5 w-0.5 opacity-15" />
+    <div className="stars pointer-events-none fixed left-0 top-0 -z-10 h-px w-px opacity-15" />
+    <div className="stars-2 pointer-events-none fixed left-0 top-0 -z-10 h-0.5 w-0.5 opacity-15" />
   </>
 )
