@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 import { GeistMono } from 'geist/font/mono'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { cn } from '@utils/cn.utils'
 import { AboutMeColumn } from '@components/layout/about-me-column'
@@ -33,6 +35,9 @@ export default function RootLayout({
             {children}
           </div>
         </div>
+
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   )
