@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import { GeistMono } from 'geist/font/mono'
-import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import { cn } from '@utils/cn.utils'
 import { AboutMeColumn } from '@components/layout/about-me-column'
 import { NavBar } from '@components/layout/nav-bar'
+import { CSPostHogProvider } from './providers'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
@@ -22,31 +22,32 @@ export default function RootLayout({
 
   return (
     <html lang="en-US" className="scroll-smooth">
-      <body
-        className={cn(
-          GeistMono.variable,
-          'flex min-h-dvh flex-col bg-black font-mono text-white selection:bg-white selection:text-black sm:flex-row',
-        )}
-      >
-        <StarsBG />
-        <NavBar />
-        <div className="flex w-full flex-col-reverse lg:flex-row">
-          <AboutMeColumn />
+      <CSPostHogProvider>
+        <body
+          className={cn(
+            GeistMono.variable,
+            'flex min-h-dvh flex-col bg-black font-mono text-white selection:bg-white selection:text-black sm:flex-row',
+          )}
+        >
+          <StarsBG />
+          <NavBar />
+          <div className="flex w-full flex-col-reverse lg:flex-row">
+            <AboutMeColumn />
 
-          <div className="w-full gap-10 overflow-y-scroll px-4 py-6 sm:px-6 sm:py-10 lg:px-10 lg:py-20">
-            {children}
-            <footer className="mx-auto mt-10 max-w-3xl border-t border-teal-950 sm:mt-20">
-              <p className="mt-3 text-sm text-white-dim">
-                Copyright &copy; {currentYear} Oliwer Kitkowski. All rights
-                reserved.
-              </p>
-            </footer>
+            <div className="w-full gap-10 overflow-y-scroll px-4 py-6 sm:px-6 sm:py-10 lg:px-10 lg:py-20">
+              {children}
+              <footer className="mx-auto mt-10 max-w-3xl border-t border-teal-950 sm:mt-20">
+                <p className="mt-3 text-sm text-white-dim">
+                  Copyright &copy; {currentYear} Oliwer Kitkowski. All rights
+                  reserved.
+                </p>
+              </footer>
+            </div>
           </div>
-        </div>
 
-        <Analytics />
-        <SpeedInsights />
-      </body>
+          <SpeedInsights />
+        </body>
+      </CSPostHogProvider>
     </html>
   )
 }
