@@ -59,7 +59,7 @@ export const AboutMeColumn = (
         <Link href="cv.pdf" variant="outline" target="_blank">
           Download CV
         </Link>
-        <Link href="#contact" variant="default">
+        <Link href="mailto:okitkowski114@gmail.com" variant="default">
           Get in touch
         </Link>
       </div>
