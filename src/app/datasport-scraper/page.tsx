@@ -41,7 +41,7 @@ export default function DatasportScraperPage(): React.ReactElement {
         <p className="mt-4">
           <span className="font-semibold text-white">Update:</span> I had to
           take down the GCP deployment, while I&apos;m looking for a less
-          expensie (free) alternative.
+          expensive (free) alternative.
         </p>
       </ProjectShowcaseHeader>
 
