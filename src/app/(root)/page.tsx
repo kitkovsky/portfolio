@@ -1,4 +1,5 @@
 import { AboutMe } from './about-me'
+import { Tools } from './tools'
 import { Projects } from './projects'
 import { GetInTouch } from './get-in-touch'
 
@@ -11,6 +12,7 @@ export default function HomePage(): React.ReactElement {
       </div>
 
       <AboutMe />
+      <Tools />
       <Projects />
       <GetInTouch />
     </div>

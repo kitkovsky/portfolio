@@ -7,6 +7,7 @@ import {
   EnvelopeIcon,
   Bars3Icon,
   XMarkIcon,
+  WrenchScrewdriverIcon,
 } from '@heroicons/react/24/outline'
 
 import { Link } from '@components/ui/link'
@@ -117,6 +118,7 @@ const MobileNav = ({
 
 const navButtons: { label: string; href: string; Icon: HeroIcon }[] = [
   { label: 'About', href: '/#about', Icon: UserIcon },
+  { label: 'Tools', href: '/#tools', Icon: WrenchScrewdriverIcon },
   { label: 'Projects', href: '/#projects', Icon: BriefcaseIcon },
   { label: 'Contact', href: '/#contact', Icon: EnvelopeIcon },
 ]
