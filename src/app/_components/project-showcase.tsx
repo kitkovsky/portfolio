@@ -18,7 +18,7 @@ const ProjectShowcase = (props: ProjectShowcaseProps): React.ReactElement => {
 interface ProjectShowcaseHeaderProps extends PropsWithChildren {
   title: string
   githubUrl: string
-  liveUrl?: string
+  liveUrl: string
   stack: string[]
   hosting: string[]
 }
@@ -52,17 +52,15 @@ const ProjectShowcaseHeader = (
           <CodeBracketIcon className="mr-1 h-5 w-5" />
           GitHub
         </Link>
-        {liveUrl && (
-          <Link
-            variant="default"
-            href={liveUrl}
-            className="flex w-fit items-center gap-1 rounded-md px-2 py-1 text-sm font-bold"
-            target="_blank"
-          >
-            <GlobeAltIcon className="mr-1 h-5 w-5" />
-            Live
-          </Link>
-        )}
+        <Link
+          variant="default"
+          href={liveUrl}
+          className="flex w-fit items-center gap-1 rounded-md px-2 py-1 text-sm font-bold"
+          target="_blank"
+        >
+          <GlobeAltIcon className="mr-1 h-5 w-5" />
+          Live
+        </Link>
       </div>
 
       <div className="flex flex-col gap-9">

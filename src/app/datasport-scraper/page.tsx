@@ -17,6 +17,7 @@ export default function DatasportScraperPage(): React.ReactElement {
       <ProjectShowcaseHeader
         title="Datasport Scraper"
         githubUrl={urls.ds.github}
+        liveUrl={urls.ds.live}
         stack={stack}
         hosting={hosting}
       >
@@ -36,12 +37,6 @@ export default function DatasportScraperPage(): React.ReactElement {
             wyniki.datasport.pl
           </Link>
           , and a web Flask app that would display the scraped data.
-        </p>
-
-        <p className="mt-4">
-          <span className="font-semibold text-white">Update:</span> I had to
-          take down the GCP deployment, while I&apos;m looking for a less
-          expensive (free) alternative.
         </p>
       </ProjectShowcaseHeader>
 

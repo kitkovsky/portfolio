@@ -9,8 +9,8 @@ export const urls = {
     github: 'https://github.com/kitkovsky/codenames-annihilator',
   },
   ds: {
-    live: ' https://imperial-ally-414513-ej4pzz4pbq-lm.a.run.app',
-    github: 'https://github.com/kitkovsky/datasport-scraper-lite',
+    live: 'https://datasport-scraper-yjeauzp5za-lm.a.run.app',
+    github: 'https://github.com/kitkovsky/datasport-scraper',
   },
   cc: {
     live: 'https://www.xn--cosprztam-gdb.pl',
