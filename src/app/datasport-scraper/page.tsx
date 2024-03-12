@@ -59,7 +59,7 @@ export default function DatasportScraperPage(): React.ReactElement {
           push - but I wanted to have full control of the deployment process.
           That&apos;s why I used separate GitHub workflows for each app, that
           used the GCP and Docker actions to build and upload an image for each
-          pull requests.
+          pull request.
         </p>
         <p>
           I also set up a cron job using GCP&apos;s Cloud Scheduler, that would
@@ -70,12 +70,17 @@ export default function DatasportScraperPage(): React.ReactElement {
       <ProjectShowcaseInfoSection header="Challenges">
         <p>
           GCP for small projects like this can be really expensive compared to
-          other alternatives. Initially I used GCP&apos;s Cloud SQL PostgreSQL
-          database, because why not, might as well test out their database
-          solution. But hosting a traditional database on a dedicated machine
-          was too pricey, especially when new services like Turso, PlanetScale,
-          or Neon exist (that automatically scale down your machines to 0 when
-          not in use), and offer free tiers with more than enough compute time.
+          other alternatives. I used GCP&apos;s Cloud SQL PostgreSQL database,
+          because why not, might as well test out their database solution. But
+          hosting a traditional database on a dedicated machine is surprisingly
+          pricey, especially when new services like Turso, PlanetScale, or Neon
+          exist (that automatically scale down your machines to 0 when not in
+          use), and offer free tiers with more than enough compute time.
+        </p>
+        <p>
+          To get around that price tag, I set up a new Google account to get the
+          free trial, and used the $300 in credits to host the the database and
+          Cloud Run services.
         </p>
       </ProjectShowcaseInfoSection>
     </ProjectShowcase>
