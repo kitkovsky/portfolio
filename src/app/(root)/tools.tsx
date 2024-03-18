@@ -18,6 +18,7 @@ export const Tools = (): React.ReactElement => {
         'GraphQL',
         'Apollo Client',
         'DrizzleORM',
+        'TanStack Query',
         'Vitest',
         'Jest',
         'SQLAlchemy',
