@@ -1,8 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    ppr: true,
-  },
   // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
   rewrites: async () => {
     return [
