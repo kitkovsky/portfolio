@@ -1,6 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+import type { NextConfig } from 'next'
+
+const nextConfig: NextConfig = {
   rewrites: async () => {
     return [
       {
