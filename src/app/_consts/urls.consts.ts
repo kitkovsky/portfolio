@@ -9,7 +9,7 @@ export const urls = {
     github: 'https://github.com/kitkovsky/codenames-annihilator',
   },
   ds: {
-    live: 'https://datasport-scraper-yjeauzp5za-lm.a.run.app',
+    live: 'https://datasport-scraper-468611-380207289455.europe-central2.run.app',
     github: 'https://github.com/kitkovsky/datasport-scraper',
   },
   cc: {
