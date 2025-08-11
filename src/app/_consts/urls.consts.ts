@@ -13,7 +13,7 @@ export const urls = {
     github: 'https://github.com/kitkovsky/datasport-scraper',
   },
   cc: {
-    live: 'https://www.xn--cosprztam-gdb.pl',
+    live: 'https://whatamicleaningtoday.com',
     github: 'https://github.com/kitkovsky/cleaning-calendar',
   },
 } satisfies Record<string, Url>
